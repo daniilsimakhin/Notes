@@ -16,6 +16,8 @@ class NoteListDataSource: NSObject {
     }
 }
 
+// MARK: - Public func
+
 extension NoteListDataSource {
     func configureDataSource() {
         guard let tableView = tableView else { return }

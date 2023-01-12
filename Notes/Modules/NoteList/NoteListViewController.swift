@@ -21,6 +21,8 @@ class NoteListViewController: UIViewController {
     }
 }
 
+// MARK: - Private func
+
 private extension NoteListViewController {
     func applyAppearance() {
         title = C.Strings.notes
@@ -45,6 +47,8 @@ private extension NoteListViewController {
     }
 }
 
+// MARK: - NoteListViewDataSource
+
 extension NoteListViewController: NoteListViewDataSource {
     var notes: [Note] {
         return store.notes
@@ -54,6 +58,7 @@ extension NoteListViewController: NoteListViewDataSource {
         return dataSource
     }
 }
+// MARK: - NoteListViewDelegate
 
 extension NoteListViewController: NoteListViewDelegate {
     func delete(with indexPath: IndexPath) {

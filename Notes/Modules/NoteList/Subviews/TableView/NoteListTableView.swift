@@ -19,6 +19,8 @@ class NoteListTableView: UITableView {
     }
 }
 
+// MARK: - Private func
+
 private extension NoteListTableView {
     func applyAppearance() {
         register(NoteListTableViewCell.self,
@@ -28,6 +30,8 @@ private extension NoteListTableView {
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
+
+// MARK: - UITableViewDelegate
 
 extension NoteListTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView,

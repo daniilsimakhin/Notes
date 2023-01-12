@@ -26,6 +26,8 @@ class NoteListTableViewCell: UITableViewCell {
     }
 }
 
+// MARK: - Private func
+
 private extension NoteListTableViewCell {
     func applyAppearance() {
         contentView.addSubview(noteLabel)
@@ -40,6 +42,8 @@ private extension NoteListTableViewCell {
         ])
     }
 }
+
+// MARK: - Public func
 
 extension NoteListTableViewCell {
     func configure(note: Note) {

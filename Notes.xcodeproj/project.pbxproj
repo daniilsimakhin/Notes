@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A545B54B296FDEAB003E51EC /* NotesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545B54A296FDEAB003E51EC /* NotesStore.swift */; };
+		A545B54D296FEE7C003E51EC /* DetailNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545B54C296FEE7C003E51EC /* DetailNoteViewController.swift */; };
 		A5AAB236296D935900BBFE7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAB235296D935900BBFE7B /* AppDelegate.swift */; };
 		A5AAB238296D935900BBFE7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAB237296D935900BBFE7B /* SceneDelegate.swift */; };
 		A5AAB23A296D935900BBFE7B /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAB239296D935900BBFE7B /* NoteListViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		A545B54A296FDEAB003E51EC /* NotesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesStore.swift; sourceTree = "<group>"; };
+		A545B54C296FEE7C003E51EC /* DetailNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteViewController.swift; sourceTree = "<group>"; };
 		A5AAB232296D935900BBFE7B /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AAB235296D935900BBFE7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5AAB237296D935900BBFE7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		A5AAB251296DA78000BBFE7B /* DetailNote */ = {
 			isa = PBXGroup;
 			children = (
+				A545B54C296FEE7C003E51EC /* DetailNoteViewController.swift */,
 			);
 			path = DetailNote;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				A5AAB238296D935900BBFE7B /* SceneDelegate.swift in Sources */,
 				A5AAB25E296DAA8A00BBFE7B /* TableViewCell+.swift in Sources */,
 				A5AAB240296D935900BBFE7B /* Notes.xcdatamodeld in Sources */,
+				A545B54D296FEE7C003E51EC /* DetailNoteViewController.swift in Sources */,
 				A5AAB25B296DA9DA00BBFE7B /* NoteListTableView.swift in Sources */,
 				A545B54B296FDEAB003E51EC /* NotesStore.swift in Sources */,
 			);

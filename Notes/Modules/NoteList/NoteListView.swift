@@ -36,6 +36,8 @@ class NoteListView: UIView {
     }
 }
 
+// MARK: - Private func
+
 private extension NoteListView {
     func applyAppearance() {
         backgroundColor = .systemBlue
@@ -53,6 +55,8 @@ private extension NoteListView {
         ])
     }
 }
+
+// MARK: - NoteListTableViewActionDelegate
 
 extension NoteListView: NoteListTableViewActionDelegate {
     func deleteNote(with indexPath: IndexPath) {
