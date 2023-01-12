@@ -21,7 +21,8 @@ class NoteListTableView: UITableView {
 
 private extension NoteListTableView {
     func applyAppearance() {
-        register(NoteListTableViewCell.self, forCellReuseIdentifier: NoteListTableViewCell.reuseIdentifier)
+        register(NoteListTableViewCell.self,
+                 forCellReuseIdentifier: NoteListTableViewCell.reuseIdentifier)
         rowHeight = 80
         delegate = self
         translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +30,8 @@ private extension NoteListTableView {
 }
 
 extension NoteListTableView: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: C.Strings.delete) { [weak self] _, _, completionHandler in
             
             self?.actionDelegate?.deleteNote(with: indexPath)
