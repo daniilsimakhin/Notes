@@ -48,5 +48,6 @@ extension NoteListTableView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         actionDelegate?.didPressedCell(with: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
