@@ -6,13 +6,12 @@ class NoteListDataSource: NSObject {
     }
     
     var notes: [Note]
-    var tableView: UITableView?
+    var tableView: NoteListTableView?
     var source: UITableViewDiffableDataSource<Section, Note>?
     
     init(notes: [Note]) {
         self.notes = notes
         super.init()
-        configureDataSource()
     }
 }
 
@@ -26,6 +25,7 @@ extension NoteListDataSource {
             cell.configure(note: self.notes[indexPath.row])
             return cell
         })
+        source?.defaultRowAnimation = .left
         applySnapshot(notes: notes)
     }
     
