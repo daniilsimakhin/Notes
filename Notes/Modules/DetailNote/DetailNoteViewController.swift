@@ -10,8 +10,18 @@ class DetailNoteViewController: BaseViewController<DetailNoteView> {
     var delegate: DetailNoteViewControllerDelegate?
     var note: Note?
     
+    override func setupViewController() {
+        applyAppearance()
+    }
+    
     override func setDelegates(_ view: DetailNoteView) {
         view.delegate = self
+    }
+}
+
+private extension DetailNoteViewController {
+    func applyAppearance() {
+        
     }
 }
 
