@@ -1,20 +1,15 @@
 import UIKit
 
-class NoteListViewController: UIViewController {
+class NoteListViewController: BaseViewController<NoteListView> {
     
     var store = NotesStore()
     lazy var dataSource = NoteListDataSource(notes: store.notes)
-    var baseView: NoteListView {
-        return view as! NoteListView
-    }
     
-    override func loadView() {
-        let noteListView = NoteListView(delegate: self, dataSource: self)
-        view = noteListView
+    override func setDelegates(_ view: NoteListView) {
+        view.setDelegates(delegate: self, dataSource: self)
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func setupViewController() {
         applyAppearance()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNoteTapped))
@@ -29,21 +24,9 @@ private extension NoteListViewController {
     }
     
     @objc func addNoteTapped(_ sender: UIButton!) {
-        
-        let alert = UIAlertController(title: "Add note", message: "Enter a text", preferredStyle: .alert)
-
-        alert.addTextField { (textField) in
-            textField.placeholder = "Some default text"
-        }
-
-        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
-            guard let text = alert?.textFields?[0].text else { return }
-            self.store.append(text: text)
-            self.dataSource.applySnapshot(notes: self.store.notes)
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
-        
+        let detailNoteVC = DetailNoteViewController()
+        detailNoteVC.delegate = self
+        navigationController?.pushViewController(detailNoteVC, animated: true)
     }
 }
 
@@ -62,11 +45,28 @@ extension NoteListViewController: NoteListViewDataSource {
 
 extension NoteListViewController: NoteListViewDelegate {
     func delete(with indexPath: IndexPath) {
-        store.remove(note: notes[indexPath.row])
+        store.remove(notes[indexPath.row])
         dataSource.applySnapshot(notes: notes)
     }
     
     func pressedCell(with indexPath: IndexPath) {
-        print("Переход в детальное окно")
+        let detailNoteVC = DetailNoteViewController()
+        let note = notes[indexPath.row]
+        detailNoteVC.configure(note, self)
+        navigationController?.pushViewController(detailNoteVC, animated: true)
+    }
+}
+
+// MARK: - DetailNoteViewControllerDelegate
+
+extension NoteListViewController: DetailNoteViewControllerDelegate {
+    func createNote(_ text: String) {
+        store.append(text: text)
+        dataSource.applySnapshot(notes: store.notes)
+    }
+    
+    func saveNote(_ note: Note) {
+        store.replaceNote(note)
+        dataSource.applySnapshot(notes: store.notes)
     }
 }

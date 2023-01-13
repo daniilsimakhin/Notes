@@ -10,10 +10,10 @@ protocol NoteListViewDataSource: AnyObject {
     var noteListDataSource: NoteListDataSource { get }
 }
 
-class NoteListView: UIView {
+class NoteListView: BaseView {
     
-    let delegate: NoteListViewDelegate?
-    let dataSource: NoteListViewDataSource?
+    var delegate: NoteListViewDelegate?
+    var dataSource: NoteListViewDataSource?
     
     private lazy var noteTableView: NoteListTableView = {
         let tableView = NoteListTableView(frame: .zero, style: .grouped)
@@ -23,16 +23,16 @@ class NoteListView: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
-    
-    init(delegate: NoteListViewDelegate, dataSource: NoteListViewDataSource) {
+}
+
+// MARK: - Public func
+
+extension NoteListView {
+    func setDelegates(delegate: NoteListViewDelegate,
+                      dataSource: NoteListViewDataSource) {
         self.delegate = delegate
         self.dataSource = dataSource
-        super.init(frame: .zero)
         applyAppearance()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -40,7 +40,6 @@ class NoteListView: UIView {
 
 private extension NoteListView {
     func applyAppearance() {
-        backgroundColor = .systemBlue
         applyConstraints()
         dataSource?.noteListDataSource.configureDataSource()
     }
