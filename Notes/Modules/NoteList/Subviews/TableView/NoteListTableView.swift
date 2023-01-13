@@ -25,7 +25,8 @@ private extension NoteListTableView {
     func applyAppearance() {
         register(NoteListTableViewCell.self,
                  forCellReuseIdentifier: NoteListTableViewCell.reuseIdentifier)
-        rowHeight = 80
+        rowHeight = UITableView.automaticDimension
+        estimatedRowHeight = 80
         delegate = self
         translatesAutoresizingMaskIntoConstraints = false
     }

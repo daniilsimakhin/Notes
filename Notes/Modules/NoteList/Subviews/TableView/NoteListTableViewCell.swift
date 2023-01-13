@@ -31,6 +31,7 @@ class NoteListTableViewCell: UITableViewCell {
 private extension NoteListTableViewCell {
     func applyAppearance() {
         contentView.addSubview(noteLabel)
+        accessoryType = .disclosureIndicator
     }
     
     func applyConstraints() {
