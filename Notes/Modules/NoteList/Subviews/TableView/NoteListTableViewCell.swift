@@ -2,7 +2,7 @@ import UIKit
 
 class NoteListTableViewCell: UITableViewCell {
     enum Constraints {
-        static let offset: CGFloat = 10
+        static let offset: CGFloat = 20
     }
     
     private lazy var noteLabel: UILabel = {
