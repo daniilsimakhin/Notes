@@ -10,11 +10,6 @@ class BaseView: UIView {
         setupView()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        applyConstraints()
-    }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -22,5 +17,4 @@ class BaseView: UIView {
     //MARK: - Public func
     
     func setupView() { }
-    func applyConstraints() { }
 }
