@@ -30,8 +30,8 @@
 <table>
 	<thead>
 		<tr>
-			<th>Launch</th>
-			<th>Search</th>
+			<th>Сохранение между сеансами</th>
+			<th>Удаление</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -49,7 +49,7 @@
 <table>
 	<thead>
 		<tr>
-			<th>Favorite</th>
+			<th>Создание</th>
 		</tr>
 	</thead>
 	<tbody>
