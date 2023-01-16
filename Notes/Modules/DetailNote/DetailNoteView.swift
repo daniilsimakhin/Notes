@@ -61,7 +61,7 @@ extension DetailNoteView: UITextViewDelegate {
 
 extension DetailNoteView {
     func configure(note: Note) {
-        textView.text = note.t
+        textView.text = note.text
     }
 }
 
