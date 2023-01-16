@@ -59,7 +59,7 @@
 				<img src="https://user-images.githubusercontent.com/52642856/212732958-43d25dd9-454a-4da6-93af-af3221221e32.gif" width="300"/>
 			</td>
 			<td>
-				<img src="https://user-images.githubusercontent.com/52642856/212734051-6f19d1a2-f3be-40f2-ad1a-68c20471dbfa.gif" width="300"/>
+				<img src="[https://user-images.githubusercontent.com/52642856/212734051-6f19d1a2-f3be-40f2-ad1a-68c20471dbfa.gif](https://user-images.githubusercontent.com/52642856/212734201-c236323f-2a1f-430a-98e5-69eac80961e5.gif)" width="300"/>
 			</td>
 		</tr>
 	</tbody>
