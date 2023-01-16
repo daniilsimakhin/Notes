@@ -60,8 +60,8 @@ extension NoteListViewController: NoteListViewDelegate {
 // MARK: - DetailNoteViewControllerDelegate
 
 extension NoteListViewController: DetailNoteViewControllerDelegate {
-    func createNote(_ text: String) {
-        store.append(text: text)
+    func createNote(_ textView: UITextView) {
+        store.append(textView: textView)
         dataSource.applySnapshot(notes: store.notes)
     }
     

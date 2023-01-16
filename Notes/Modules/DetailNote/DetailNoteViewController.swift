@@ -2,7 +2,7 @@ import UIKit
 
 protocol DetailNoteViewControllerDelegate: AnyObject {
     func saveNote(_ note: Note)
-    func createNote(_ text: String)
+    func createNote(_ text: UITextView)
 }
 
 class DetailNoteViewController: BaseViewController<DetailNoteView> {
@@ -16,6 +16,7 @@ class DetailNoteViewController: BaseViewController<DetailNoteView> {
     
     override func setDelegates(_ view: DetailNoteView) {
         view.delegate = self
+        view.dataSource = self
     }
 }
 
@@ -38,14 +39,13 @@ extension DetailNoteViewController {
 
 // MARK: - DetailNoteViewDelegate
 
-extension DetailNoteViewController: DetailNoteViewDelegate {
-    func noteDidEndEditing(text: String) {
+extension DetailNoteViewController: DetailNoteViewDelegate, DetailNoteViewDataSource {
+    func noteDidEndEditing(textView: UITextView) {
         guard let note = note else {
-            delegate?.createNote(text)
+            delegate?.createNote(textView)
             return
         }
-        note.text = text
-        
+        note.text = textView.text
         delegate?.saveNote(note)
     }
 }
