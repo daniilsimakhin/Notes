@@ -26,6 +26,7 @@ class DetailNoteView: BaseView {
     
     override func setupView() {
         applyAppearance()
+        textView.becomeFirstResponder()
     }
 }
 
@@ -60,7 +61,7 @@ extension DetailNoteView: UITextViewDelegate {
 
 extension DetailNoteView {
     func configure(note: Note) {
-        textView.attributedText = NSAttributedString(string: note.text ?? "")
+        textView.text = note.t
     }
 }
 
