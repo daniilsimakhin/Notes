@@ -25,7 +25,7 @@
 • Менять шрифт и размер текста;
 • Вставка картинок.
 
-## Demonstration
+## Демонстрация
 
 <table>
 	<thead>
@@ -61,17 +61,17 @@
 	</tbody>
 </table>
 
-## Technology stack
+## Стек технологий
 * UIKit
 * MVC
 * POP
 * CoreData
 
-## Requirements
+## Зависимости
 * iOS 16.2
 * Xcode 14.2
 
-## Installation
-1. Fork and clone this project to your machine
-2. Open the `.xcodeproj` file in Xcode
-3. Build and run
+## Установка
+1. Клонируйте или форкните проект на ваш компьютер
+2. Откройте `.xcodeproj` файл в Xcode
+3. Соберите проект и запустите
