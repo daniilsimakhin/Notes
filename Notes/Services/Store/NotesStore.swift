@@ -13,9 +13,9 @@ class NotesStore {
         loadNotes()
     }
     
-    func append(text: String) {
+    func append(textView: UITextView) {
         let note = Note(context: context)
-        note.text = text
+        note.text = textView.text
         note.id = UUID().uuidString
         note.dateCreating = Date().timeIntervalSince1970
         while notes.contains(where: { $0.id == note.id }) {
