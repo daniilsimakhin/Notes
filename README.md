@@ -38,7 +38,6 @@
 		<tr>
 			<td>
 				<img src="https://user-images.githubusercontent.com/52642856/212732814-b59ee66a-4561-4ec5-98bc-c45735045bac.gif" width="300"/>
-        
 			</td>
 			<td>
 				<img src="https://user-images.githubusercontent.com/52642856/212732919-b9d1e513-3be1-4510-ab5d-dd35a1ab030f.gif" width="300"/>
@@ -51,7 +50,6 @@
 	<thead>
 		<tr>
 			<th>Favorite</th>
-      <th>Detail</th>
 		</tr>
 	</thead>
 	<tbody>
