@@ -50,12 +50,16 @@
 	<thead>
 		<tr>
 			<th>Создание</th>
+			<th>Изменение шрифта</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
       <td>
 				<img src="https://user-images.githubusercontent.com/52642856/212732958-43d25dd9-454a-4da6-93af-af3221221e32.gif" width="300"/>
+			</td>
+			<td>
+				<img src="https://user-images.githubusercontent.com/52642856/212734051-6f19d1a2-f3be-40f2-ad1a-68c20471dbfa.gif" width="300"/>
 			</td>
 		</tr>
 	</tbody>
